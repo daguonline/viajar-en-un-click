@@ -35,108 +35,126 @@
   <div class="main-wrapper">
     <!-- Main Glass Card Container -->
     <main class="construction-card" id="tiltCard">
-      <!-- Status Badge -->
-      <div class="status-badge" id="statusBadge">
-        <span class="badge-pulse"></span>
-        <i class="fa-solid fa-compass-drafting badge-icon"></i>
-        <span>WEB EN CONSTRUCCIÓN</span>
-      </div>
-
-      <!-- Logo Header -->
-      <div class="logo-container">
-        <img src="logo.png" alt="Viajar en un Click Logo" class="brand-logo" id="brandLogo">
-        <div class="logo-glow"></div>
-      </div>
-
-      <!-- Main Headline & Subtitle -->
-      <h1 class="main-title">
-        ¡Pronto despegamos! ✈️
-      </h1>
-      
-      <p class="main-subtitle">
-        Pronto estaremos activos para ayudarte a <span class="highlight-text">cumplir tus sueños</span>.
-      </p>
-
-      <!-- Travel Destination / Service Pill Tags -->
-      <div class="services-grid">
-        <div class="service-chip">
-          <i class="fa-solid fa-plane-departure"></i>
-          <span>Vuelos</span>
+      <!-- Left Column: Brand & Info -->
+      <div class="card-column card-brand">
+        <!-- Status Badge -->
+        <div class="status-badge" id="statusBadge">
+          <span class="badge-pulse"></span>
+          <i class="fa-solid fa-compass-drafting badge-icon"></i>
+          <span>WEB EN CONSTRUCCIÓN</span>
         </div>
-        <div class="service-chip">
-          <i class="fa-solid fa-hotel"></i>
-          <span>Hoteles</span>
-        </div>
-        <div class="service-chip">
-          <i class="fa-solid fa-suitcase-rolling"></i>
-          <span>Paquetes</span>
-        </div>
-        <div class="service-chip">
-          <i class="fa-solid fa-earth-americas"></i>
-          <span>Excursiones</span>
-        </div>
-      </div>
 
-      <!-- Contact Highlight Card -->
-      <div class="contact-box">
-        <div class="contact-header">
-          <div class="contact-icon-wrapper">
-            <i class="fa-solid fa-headset"></i>
+        <!-- Logo Header -->
+        <div class="logo-container">
+          <img src="logo.png" alt="Viajar en un Click Logo" class="brand-logo" id="brandLogo">
+          <div class="logo-glow"></div>
+        </div>
+
+        <!-- Main Headline & Subtitle -->
+        <h1 class="main-title">
+          ¡Pronto despegamos! ✈️
+        </h1>
+        
+        <p class="main-subtitle">
+          Pronto estaremos activos para ayudarte a <span class="highlight-text">cumplir tus sueños</span> de viajar por el mundo.
+        </p>
+
+        <!-- Travel Destination / Service Pill Tags -->
+        <div class="services-grid">
+          <div class="service-chip">
+            <i class="fa-solid fa-plane-departure"></i>
+            <span>Vuelos</span>
           </div>
-          <div class="contact-text-content">
-            <span class="contact-label">¿Tenés alguna consulta inmediata?</span>
-            <div class="contact-info-list">
-              <span class="contact-phone"><i class="fa-brands fa-whatsapp"></i> +54 261 307-4682</span>
-              <span class="contact-email" id="emailText"><i class="fa-regular fa-envelope"></i> info@viajarenunclick.com.ar</span>
+          <div class="service-chip">
+            <i class="fa-solid fa-hotel"></i>
+            <span>Hoteles</span>
+          </div>
+          <div class="service-chip">
+            <i class="fa-solid fa-suitcase-rolling"></i>
+            <span>Paquetes</span>
+          </div>
+          <div class="service-chip">
+            <i class="fa-solid fa-earth-americas"></i>
+            <span>Excursiones</span>
+          </div>
+        </div>
+
+        <!-- Quick Social & Contact Links -->
+        <div class="social-links">
+          <a href="https://wa.me/542613074682?text=¡Hola!%20Quiero%20hacer%20una%20consulta%20para%20mi%20próximo%20viaje" target="_blank" rel="noopener noreferrer" class="social-btn whatsapp" title="WhatsApp (+54 261 307-4682)">
+            <i class="fa-brands fa-whatsapp"></i>
+          </a>
+          <a href="https://www.instagram.com/viajarenunclick" target="_blank" rel="noopener noreferrer" class="social-btn instagram" title="Instagram (@viajarenunclick)">
+            <i class="fa-brands fa-instagram"></i>
+          </a>
+          <a href="mailto:info@viajarenunclick.com.ar" class="social-btn email" title="Enviar Email">
+            <i class="fa-solid fa-envelope"></i>
+          </a>
+        </div>
+      </div>
+
+      <!-- Right Column: Interactive Actions & Contact -->
+      <div class="card-column card-actions-wrapper">
+        <!-- Contact Highlight Card -->
+        <div class="contact-box">
+          <div class="contact-header">
+            <div class="contact-icon-wrapper">
+              <i class="fa-solid fa-headset"></i>
+            </div>
+            <div class="contact-text-content">
+              <span class="contact-label">¿Tenés alguna consulta inmediata?</span>
+              <div class="contact-info-list">
+                <span class="contact-phone"><i class="fa-brands fa-whatsapp"></i> +54 261 307-4682</span>
+                <span class="contact-email" id="emailText"><i class="fa-regular fa-envelope"></i> info@viajarenunclick.com.ar</span>
+              </div>
             </div>
           </div>
-        </div>
-        
-        <div class="contact-actions">
-          <a href="https://wa.me/542613074682?text=¡Hola!%20Quiero%20hacer%20una%20consulta%20para%20mi%20próximo%20viaje" target="_blank" rel="noopener noreferrer" class="btn btn-whatsapp-direct">
-            <i class="fa-brands fa-whatsapp"></i>
-            <span>WhatsApp</span>
-          </a>
-          <button class="btn btn-copy" id="btnCopyEmail" title="Copiar dirección de email">
-            <i class="fa-regular fa-copy"></i>
-            <span>Copiar Email</span>
-          </button>
-        </div>
-      </div>
-
-      <!-- Subscription Form -->
-      <form class="notify-form" id="notifyForm">
-        <label for="userEmail" class="form-label">Recibí un aviso el día del lanzamiento:</label>
-        <div class="input-group">
-          <div class="input-icon">
-            <i class="fa-regular fa-envelope"></i>
+          
+          <div class="contact-actions">
+            <a href="https://wa.me/542613074682?text=¡Hola!%20Quiero%20hacer%20una%20consulta%20para%20mi%20próximo%20viaje" target="_blank" rel="noopener noreferrer" class="btn btn-whatsapp-direct">
+              <i class="fa-brands fa-whatsapp"></i>
+              <span>WhatsApp</span>
+            </a>
+            <button class="btn btn-copy" id="btnCopyEmail" title="Copiar dirección de email">
+              <i class="fa-regular fa-copy"></i>
+              <span>Copiar Email</span>
+            </button>
           </div>
-          <input 
-            type="email" 
-            id="userEmail" 
-            placeholder="Ingresá tu correo electrónico..." 
-            required 
-            autocomplete="email"
-          >
-          <button type="submit" class="btn btn-notify">
-            <span>Avisarme</span>
-            <i class="fa-solid fa-bell"></i>
-          </button>
         </div>
-        <p class="form-feedback" id="formFeedback"></p>
-      </form>
 
-      <!-- Quick Social & Contact Links -->
-      <div class="social-links">
-        <a href="https://wa.me/542613074682?text=¡Hola!%20Quiero%20hacer%20una%20consulta%20para%20mi%20próximo%20viaje" target="_blank" rel="noopener noreferrer" class="social-btn whatsapp" title="WhatsApp (+54 261 307-4682)">
-          <i class="fa-brands fa-whatsapp"></i>
-        </a>
-        <a href="https://www.instagram.com/viajarenunclick" target="_blank" rel="noopener noreferrer" class="social-btn instagram" title="Instagram (@viajarenunclick)">
-          <i class="fa-brands fa-instagram"></i>
-        </a>
-        <a href="mailto:info@viajarenunclick.com.ar" class="social-btn email" title="Enviar Email">
-          <i class="fa-solid fa-envelope"></i>
-        </a>
+        <!-- Subscription Form -->
+        <form class="notify-form" id="notifyForm">
+          <label for="userEmail" class="form-label">Recibí un aviso el día del lanzamiento:</label>
+          <div class="input-group">
+            <div class="input-icon">
+              <i class="fa-regular fa-envelope"></i>
+            </div>
+            <input 
+              type="email" 
+              id="userEmail" 
+              placeholder="Ingresá tu correo electrónico..." 
+              required 
+              autocomplete="email"
+            >
+            <button type="submit" class="btn btn-notify">
+              <span>Avisarme</span>
+              <i class="fa-solid fa-bell"></i>
+            </button>
+          </div>
+          <p class="form-feedback" id="formFeedback"></p>
+        </form>
+
+        <!-- Features Bar -->
+        <div class="features-bar">
+          <div class="feature-item">
+            <i class="fa-solid fa-shield-halved"></i>
+            <span>Atención Personalizada</span>
+          </div>
+          <div class="feature-item">
+            <i class="fa-solid fa-plane-up"></i>
+            <span>Las Mejores Ofertas</span>
+          </div>
+        </div>
       </div>
     </main>
 
