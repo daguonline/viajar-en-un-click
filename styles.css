@@ -681,21 +681,24 @@ html, body {
 
 /* --- Responsive Media Queries --- */
 
-/* Desktop Horizontal Layout (>= 992px) */
-@media (min-width: 992px) {
+/* --- Responsive Media Queries --- */
+
+/* Desktop & Tablet Horizontal Layout (>= 768px) */
+@media (min-width: 768px) {
   .main-wrapper {
     padding: 3rem 2rem;
   }
 
   .construction-card {
     max-width: 1080px;
-    width: 92%;
+    width: 94%;
     display: grid;
     grid-template-columns: 1.15fr 1fr;
-    gap: 3.5rem;
+    gap: 3rem;
     align-items: center;
     text-align: left;
     padding: 3.5rem 3rem;
+    margin: 0 auto;
   }
 
   .card-brand {
@@ -722,12 +725,14 @@ html, body {
   .card-brand .main-title {
     font-size: 2.4rem;
     margin-bottom: 0.8rem;
+    text-align: left;
   }
 
   .card-brand .main-subtitle {
     font-size: 1.12rem;
     max-width: 100%;
     margin-bottom: 1.8rem;
+    text-align: left;
   }
 
   .card-brand .services-grid {
@@ -760,16 +765,17 @@ html, body {
   }
 }
 
-/* Mobile Vertical Layout (< 992px) */
-@media (max-width: 991px) {
+/* Mobile Vertical Layout (< 768px) */
+@media (max-width: 767px) {
   .construction-card {
-    max-width: 600px;
-    padding: 2.8rem 2rem;
+    max-width: 580px;
+    padding: 2.5rem 1.6rem;
     display: flex;
     flex-direction: column;
     align-items: center;
     text-align: center;
-    gap: 2.2rem;
+    gap: 2rem;
+    margin: 0 auto;
   }
 
   .card-brand {
@@ -797,7 +803,11 @@ html, body {
     display: flex;
     flex-direction: column;
     width: 100%;
-    gap: 1.6rem;
+    gap: 1.5rem;
+    background: transparent;
+    border: none;
+    padding: 0;
+    box-shadow: none;
   }
 }
 
