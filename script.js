@@ -14,11 +14,14 @@ document.addEventListener('DOMContentLoaded', () => {
  */
 function initClipboardCopy() {
   const btnCopy = document.getElementById('btnCopyEmail');
-  const emailText = document.getElementById('emailText').innerText.trim();
+  const emailEl = document.getElementById('emailText');
 
-  if (!btnCopy) return;
+  if (!btnCopy || !emailEl) return;
 
   btnCopy.addEventListener('click', async () => {
+    const rawText = emailEl.innerText.trim();
+    const emailMatch = rawText.match(/[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}/);
+    const emailText = emailMatch ? emailMatch[0] : rawText;
     try {
       if (navigator.clipboard && window.isSecureContext) {
         await navigator.clipboard.writeText(emailText);

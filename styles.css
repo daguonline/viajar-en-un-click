@@ -373,13 +373,32 @@ html, body {
   font-weight: 600;
 }
 
-.contact-email {
-  font-size: 1.05rem;
+.contact-info-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0.2rem;
+  margin-top: 0.2rem;
+}
+
+.contact-phone, .contact-email {
+  font-size: 0.95rem;
   font-weight: 700;
   color: var(--text-main);
   word-break: break-all;
-  font-family: monospace, var(--font-family);
   letter-spacing: -0.01em;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.contact-phone i {
+  color: #25D366;
+  font-size: 1rem;
+}
+
+.contact-email i {
+  color: var(--primary-orange);
+  font-size: 0.9rem;
 }
 
 .contact-actions {
@@ -415,6 +434,18 @@ html, body {
 .btn-primary:hover {
   transform: translateY(-2px);
   box-shadow: 0 6px 20px rgba(230, 46, 68, 0.5);
+  filter: brightness(1.08);
+}
+
+.btn-whatsapp-direct {
+  background: linear-gradient(135deg, #25D366 0%, #128C7E 100%);
+  color: #FFFFFF;
+  box-shadow: 0 4px 15px rgba(37, 211, 102, 0.35);
+}
+
+.btn-whatsapp-direct:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(37, 211, 102, 0.5);
   filter: brightness(1.08);
 }
 
