@@ -65,10 +65,15 @@ function showToast(message, iconClass = 'fa-solid fa-circle-check') {
 
   const toast = document.createElement('div');
   toast.className = 'toast';
-  toast.innerHTML = `
-    <i class="${iconClass}"></i>
-    <span>${message}</span>
-  `;
+
+  const icon = document.createElement('i');
+  icon.className = iconClass;
+
+  const textNode = document.createElement('span');
+  textNode.textContent = message;
+
+  toast.appendChild(icon);
+  toast.appendChild(textNode);
 
   container.appendChild(toast);
 
