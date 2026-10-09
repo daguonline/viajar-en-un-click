@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Viajar en un Click | Web en Construcción</title>
+  <meta name="description" content="Web en construcción. Pronto estaremos activos para ayudarte a cumplir tus sueños de viajar. Contacto: info@viajarenunclick.com.ar">
+  
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="logo.png">
+  
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  
+  <!-- FontAwesome for Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <!-- Dynamic Ambient Background Elements -->
+  <div class="bg-gradient-overlay"></div>
+  <div class="bg-pattern"></div>
+  <div class="clouds-container">
+    <div class="cloud cloud-1"></div>
+    <div class="cloud cloud-2"></div>
+    <div class="cloud cloud-3"></div>
+  </div>
+  
+  <!-- Canvas for Flight Paths & Particles -->
+  <canvas id="skyCanvas"></canvas>
+
+  <div class="main-wrapper">
+    <!-- Main Glass Card Container -->
+    <main class="construction-card" id="tiltCard">
+      <!-- Status Badge -->
+      <div class="status-badge" id="statusBadge">
+        <span class="badge-pulse"></span>
+        <i class="fa-solid fa-compass-drafting badge-icon"></i>
+        <span>WEB EN CONSTRUCCIÓN</span>
+      </div>
+
+      <!-- Logo Header -->
+      <div class="logo-container">
+        <img src="logo.png" alt="Viajar en un Click Logo" class="brand-logo" id="brandLogo">
+        <div class="logo-glow"></div>
+      </div>
+
+      <!-- Main Headline & Subtitle -->
+      <h1 class="main-title">
+        ¡Pronto despegamos! ✈️
+      </h1>
+      
+      <p class="main-subtitle">
+        Pronto estaremos activos para ayudarte a <span class="highlight-text">cumplir tus sueños</span>.
+      </p>
+
+      <!-- Travel Destination / Service Pill Tags -->
+      <div class="services-grid">
+        <div class="service-chip">
+          <i class="fa-solid fa-plane-departure"></i>
+          <span>Vuelos</span>
+        </div>
+        <div class="service-chip">
+          <i class="fa-solid fa-hotel"></i>
+          <span>Hoteles</span>
+        </div>
+        <div class="service-chip">
+          <i class="fa-solid fa-suitcase-rolling"></i>
+          <span>Paquetes</span>
+        </div>
+        <div class="service-chip">
+          <i class="fa-solid fa-earth-americas"></i>
+          <span>Excursiones</span>
+        </div>
+      </div>
+
+      <!-- Contact Highlight Card -->
+      <div class="contact-box">
+        <div class="contact-header">
+          <div class="contact-icon-wrapper">
+            <i class="fa-solid fa-envelope-open-text"></i>
+          </div>
+          <div class="contact-text-content">
+            <span class="contact-label">¿Tenés alguna consulta inmediata?</span>
+            <span class="contact-email" id="emailText">info@viajarenunclick.com.ar</span>
+          </div>
+        </div>
+        
+        <div class="contact-actions">
+          <button class="btn btn-copy" id="btnCopyEmail" title="Copiar dirección de email">
+            <i class="fa-regular fa-copy"></i>
+            <span>Copiar Email</span>
+          </button>
+          <a href="mailto:info@viajarenunclick.com.ar" class="btn btn-primary" id="btnSendMail">
+            <i class="fa-paper-plane fa-solid"></i>
+            <span>Escribinos</span>
+          </a>
+        </div>
+      </div>
+
+      <!-- Subscription Form -->
+      <form class="notify-form" id="notifyForm">
+        <label for="userEmail" class="form-label">Recibí un aviso el día del lanzamiento:</label>
+        <div class="input-group">
+          <div class="input-icon">
+            <i class="fa-regular fa-envelope"></i>
+          </div>
+          <input 
+            type="email" 
+            id="userEmail" 
+            placeholder="Ingresá tu correo electrónico..." 
+            required 
+            autocomplete="email"
+          >
+          <button type="submit" class="btn btn-notify">
+            <span>Avisarme</span>
+            <i class="fa-solid fa-bell"></i>
+          </button>
+        </div>
+        <p class="form-feedback" id="formFeedback"></p>
+      </form>
+
+      <!-- Quick Social & Contact Links -->
+      <div class="social-links">
+        <a href="https://wa.me/?text=Hola%20Viajar%20en%20un%20Click!" target="_blank" rel="noopener noreferrer" class="social-btn whatsapp" title="WhatsApp">
+          <i class="fa-brands fa-whatsapp"></i>
+        </a>
+        <a href="mailto:info@viajarenunclick.com.ar" class="social-btn email" title="Enviar Email">
+          <i class="fa-solid fa-envelope"></i>
+        </a>
+        <a href="#" class="social-btn instagram" title="Instagram (Próximamente)" onclick="event.preventDefault(); showToast('Instagram disponible muy pronto');">
+          <i class="fa-brands fa-instagram"></i>
+        </a>
+      </div>
+    </main>
+
+    <!-- Footer Copyright -->
+    <footer class="footer">
+      <p>&copy; 2026 <strong>Viajar en un Click</strong>. Todos los derechos reservados.</p>
+    </footer>
+  </div>
+
+  <!-- Toast Notification Container -->
+  <div class="toast-container" id="toastContainer"></div>
+
+  <script src="script.js"></script>
+</body>
+</html>
